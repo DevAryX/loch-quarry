@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lochquarry Outdoor Centre - Home</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #F9FAF8;
+      color: #6B7280;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Sticky Header */
+    header {
+      background-color: #2C5F2D;
+      color: #F9FAF8;
+      padding: 10px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      float: left;
+      height: 80px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    nav ul li a {
+      color: #F9FAF8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #F4A700;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .hero-text h2 {
+      font-size: 34px;
+    }
+
+    /* Book Button */
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #F4A700;
+      color: #1E3A5F;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .cta-button:hover {
+      background-color: #D97706;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .feature-box {
+      width: 30%;
+      padding: 20px;
+      background: #FFF;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-box a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .feature-box h3 {
+      color: #2C5F2D;
+    }
+
+    .reviews {
+      background-color: #1E3A5F;
+      color: #F9FAF8;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .review-slider {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .review {
+      display: none;
+    }
+
+    .review.active {
+      display: block;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      text-align: center;
+      padding: 40px;
+      background: #F9FAF8;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #CCC;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      display: block;         
+      width: 50%;
+      margin: 10px auto;      
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #F4A700;
+      color: #1E3A5F;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }   
+
+    .contact-form button:hover {
+      background-color: #D97706;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2C5F2D;
+      color: #F9FAF8;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #F4A700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function rotateReviews() {
+      let reviews = document.querySelectorAll(".review");
+      let index = 0;
+  
+      setInterval(() => {
+        reviews.forEach(r => r.classList.remove("active"));
+        reviews[index].classList.add("active");
+        index = (index + 1) % reviews.length;
+      }, 3000);
+    }
+  
+    window.onload = rotateReviews;
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="logo.png" alt="Lochquarry Outdoor Centre Logo" class="logo">
+    <h1>Lochquarry Outdoor Centre</h1>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Land.html">Land Activities</a></li>
+        <li><a href="Water.html">Water Activities</a></li>
+        <li><a href="Rope.html">Rope Adventures</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="Landscape.jpg" alt="Lochquarry Outdoor Landscape">
+    <div class="hero-text">
+      <h2>Adventure Awaits!</h2>
+      <a href="Home.html" class="cta-button">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-box">
+      <a href="Land.html">
+        <h3>Land Activities</h3>
+        <p>Experience mountain biking, hiking, and orienteering.</p>
+      </a>
+    </div>
+    <div class="feature-box">
+      <a href="Water.html">
+        <h3>Water Activities</h3>
+        <p>Enjoy kayaking, canoeing, and wild swimming.</p>
+      </a>
+    </div>
+    <div class="feature-box">
+      <a href="Rope.html">
+        <h3>Rope Challenges</h3>
+        <p>Test yourself with rock climbing and zip lines.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="review-slider">
+      <p class="review active">"Five stars, it was great!" - Joe, 14</p>
+      <p class="review">"An unforgettable experience!" - Sarah, 16</p>
+      <p class="review">"Best summer ever!" - Tom, 12</p>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="How may we help you?"></textarea>
+    <button>Send</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Phone: 01475 229 8311</p>
+    <p>Visit <a href="About.html">Outdoor Scotland</a></p>
+  </footer>
+</body>
+</html>
